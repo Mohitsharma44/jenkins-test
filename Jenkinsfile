@@ -3,7 +3,7 @@ pipeline {
       docker
       {
         image 'python:3.5.1'
-        args '--user root --privileged'
+        args '--userns host --user root --privileged'
       }
     }
     stages {
